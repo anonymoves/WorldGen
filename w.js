@@ -14,7 +14,7 @@ function Redraw()
 	if(A == 0) A = 1;
 	F = parseFloat(IFID.value);
 	X = parseInt(IXID.value);
-	P = parseFloat(IPID.value);
+	P = 1 - parseFloat(IPID.value);
 	drawWorld(A, F, X, P);
 	drawObject(User);
 }
