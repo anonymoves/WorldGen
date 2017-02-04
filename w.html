@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+        <meta charset = 'utf-8' />
+	</head>
+	<body>
+		<canvas width = '500' height = '500' id = 'cvs' style = "order: 1px solid black;">Обновите браузер</canvas>
+		<table>
+			<tr>
+				<td>
+					A &nbsp 
+				</td>
+				<td>
+					<input id = "IAID" value = "3" size = "3" oninput=Redraw()></input>
+				</td>
+				<td>
+					Амплитуда (максимальный размер)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					F &nbsp 
+				</td>
+				<td>
+					<input id = "IFID" value = "0.1" size = "3" oninput=Redraw()></input>
+				</td>
+				<td>
+					Изменчивость (0.0 ... 1.0)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					X &nbsp 
+				</td>
+				<td>
+					<input id = "IXID" value = "6" size = "3" oninput=Redraw()></input>
+				</td>
+				<td>
+					Расстояние между объектами
+				</td>
+			</tr>
+			<tr>
+				<td>
+					P &nbsp 
+				</td>
+				<td>
+					<input id = "IPID" value = "0.3" size = "3" oninput=Redraw()></input>
+				</td>
+				<td>
+					Вероятность появления
+				</td>
+			</tr>
+		</table>
+		<script src = "w.js"></script>
+	</body>
+</html>
