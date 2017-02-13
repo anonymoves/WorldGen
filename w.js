@@ -1,3 +1,8 @@
+
+xx=0;
+yy = 0;
+
+
 User = {x:190, y:190, size:10, color:"orange"};
 
 WorldConstant = 11;
@@ -30,7 +35,7 @@ function drawWorld(A, F, X, P)
 	{
 		for(y = 0; y < cvs.height; y+=X)
 		{
-			if(randomizer(x, y, 100) / 100 >= P)
+			if(randomizer(x+xx, y+yy, 100) / 100 >= P)
 			{
 				F1 += F;
 				if(F1 == 1.0) F1 = 0.0;
@@ -77,4 +82,15 @@ function drawObject(object)
 	ctx.arc(object.x, object.y, object.size, 0, Math.PI / 180 * 360, true)
 	ctx.fillStyle = object.color
 	ctx.fill()
+}
+
+var timerId = setInterval(function (){Move()}, 10);
+
+function Move()
+{
+	xx+=5;
+	yy+=5;
+	XX.value = xx;
+	YY.value = yy;
+	Redraw();
 }
